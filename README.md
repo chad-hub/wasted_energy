@@ -25,8 +25,8 @@ Luckily, there is a healthy trove of public information available to explore thi
   2. Establish pipeline of clean, usable data.
   3. Generate visual representations that make the scale of the energy waste clear. Examples of questions I hope to answer:
     - Exactly how much energy have we wasted? How does this compare to historical oil / gas production and consumption?
-    - What is the scale of waste in terms compared to other potential uses?
-    - What are the economics at play in the flaring? 
+    - What is the scale of waste in terms of other potential uses?
+    - What are the economics driving the decision to flare? 
     - What does the flare volume look like going forward and what ways is this issue being solved?
   4. Leverage hypothesis testing methods to demonstrate ability to apply lessons to real problems. 
 
