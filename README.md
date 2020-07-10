@@ -1,1 +1,2 @@
-# wasted_energy
+# Wasted Energy: Exploratory analysis into the energy lost to natural gas flaring
+
