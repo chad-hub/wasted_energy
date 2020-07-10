@@ -4,20 +4,25 @@ The goal of this project is to explore public data to assess the scale of energy
 
 # Background and Inspiration
 
-Energy is a passion of mine. Whether I am working on improving existing processes of energy extraction or focusing on renewables, I believe this is a vital area of work. My work experience often left me frustrated with many confounding realities - flaring off natural gas was one of them. Watching natural gas get burned off to flare (the only economically viable option in many remotre areas) specifically frustrated me. Now that I am empowered with the tools, I want to take a deep dive into the data availble and quantify the scale of the energy wasted.
+Energy is a passion of mine. I believe it is vital that we improve existing means of energy generation while also focusing on renewables.  I am often frustrated by the energy industry's common practice of flaring natural gas - the burning of energy that is otherwise too costly to take to market. Now that I am empowered with the tools, I want to take a deep dive into the data available and visualize the scale of the waste. 
 
 # Data Sources
 
-Luckily, there is a treasure trove of public information available to explore this information:
+Luckily, there is a healthy trove of public information available to explore this information:
 
-- Texas Railroad Commission:
+- **Texas Railroad Commission:**
   - [Natural Gas Production Data](https://rrc.texas.gov/oil-gas/research-and-statistics/production-data/historical-production-data/natural-gas-production-and-well-counts-since-1935/)
   - [Oil Production Data](https://rrc.texas.gov/oil-gas/research-and-statistics/production-data/historical-production-data/crude-oil-production-and-well-counts-since-1935/)
   - [TRRC Commissioner Report](https://rrc.texas.gov/media/56420/sitton-texas-flaring-report-q1-2020.pdf)
-  - XXX
   
-- U.S. Energy Information:
+- **U.S. Energy Information:**
   - [Summary Statistics for Natural Gas - Texas](https://www.eia.gov/dnav/ng/ng_sum_lsum_dcu_STX_a.htm)
   - [Well Locations, Plant Locations, Volumes](https://www.eia.gov/beta/states/states/tx/data/dashboard/natural-gas)
-  
+ 
+
+  # Strategy
+  1. Scrape as much information possible for multple publically available sources.
+  2. Establish pipeline of clean, usable data.
+  3. Generate visual representations that make the scale of the energy waste clear - perhaps comparing the lost potential uses of the gas.
+  4. Leverage hypothesis testing methods to demonstrate ability to apply lessons to real problems. 
 
