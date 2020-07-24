@@ -12,7 +12,8 @@ Now that I am empowered with the tools and knowledge to explore and test the dat
 # Hypothesis
 I decided to focus on Texas' energy waste vs. the overall waste in the US becuase Texas is, by a wide margin, the state that produces the most energy from hydrocarbons. 
 
-![topstatespic](/plots/top_states.png)
+
+<img src="./plots/top_states.png" width="550" height="400">
 
 
 Another driving factor for me is that Texas is the second largest state, and the productive reservoirs are spread across a wide swath of land in West Texas - many of these areas very remote with little or no infrastructure in place to bring the natural gas to market. 
@@ -29,11 +30,13 @@ All data for this analysis was scraped from [U.S. Energy Information Administrat
 
 After the data was merged and cleaned, I began performing some basic EDA forcusing on some of points of interest. I started with looking into the bigger picture, and then diving into testing my hypothesis. 
 
-![total energy](/plots/tot_energy_produced.png)
+
+<img src="./plots/tot_energy_produced.png" width="550" height="400">
  
  This plot shows the annual energy production of the US (including Texas) and Texas alone. The units depicted are kWh, combing both natural gas and oil values. Also on the graph is the percentage of energy consumed in the United States that comes from one of those two sources in the same time frame. I wanted to display the percentage from these sources as well because it speaks to why my topic is so important. These products, with all their flaws, still dominate our energy spectrum. As we wane off these goods for greener sources, we need to ensure that we still strive to optimize them. It will take decades to switch to fully renewable sources, and even longer for the developing world. This graph emphasizes this point for me.  
  
-![cum_energy_waste](/plots/cum_waste.png)
+
+<img src="./plots/cum_waste.png" width="550" height="400">
 
 The above plot shows, quite simply, the scale of the waster we are talking about over the years. Some perspective: 
   * The total amount of energy wasted to flare since 1980 could power 161 million US homes for a year (based on 2019 consumption average) 
@@ -44,18 +47,19 @@ Obviously the examples above don't facotor in the energy lost in converting ther
 
 After getting familiar with the data and observing the large scale energy waste, I turned my attention to testing my Hypothesis. I sliced the data to only include Texas and the rest of the US, normalized the volumes produced / flared with kWh, and created the ratio of energy wasted / energy produced - a unitless value that provides a useful proving ground for how well Texas is utilizing its energy vs. the rest of the country. 
 
-![texas_us_hist](/plots/TX_US_hist.png)
+
+<img src="./plots/TX_US_hist.png" width="550" height="400">
 
 
-![texas_us_box](/plots/TX_US_box.png)
-
+<img src="./plots/TX_US_box.png" width="550" height="400">
 
 
 # Results
 
 Utilmately my investigation led me to a p value of 0.53 (alpha was 0.05) and my test **failed to reject the null hypothesis**. That is, I could not reject the hypothesis that Texas's waste ratio is equal to the rest of the US. While Texas certainly generates the lion's share of energy in this country, it remains unclear justhow Texas stacks up to the res of the country...for now. I wanted to see how the waste ratios between Texas and the US changed over time see if we could expect a change going forward. The resulting plot was interesting:
 
-![texas_us_ratio and cost](/plots/waste_ratio_over_time_with_price.png)
+
+<img src="./plots/waste_ratio_over_time_with_price.png" width="550" height="400">
 
 Clearly since about 2011/2012, the waste ratio in Texas has sky-rocketed. While this ratio still remains small, we are talking about huge amounts of energy. As the US has overtaken Saudi Arabia and Russia as the world's top producers, and as oil companies push further and further into the deserts of Texas, away from any market that demands natural gas, the most feasible option available is to burn it off. This is not a new problem. This has been discussed globally for a very long time. Its time to re-think how this energy can be used especially in our hyper-connected world and 5G future.  
 
