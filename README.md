@@ -50,3 +50,30 @@ After getting familiar with the data and observing the large scale energy waste,
 ![texas_us_box](/plots/TX_US_box.png)
 
 
+
+# Results
+
+Utilmately my investigation led me to a p value of 0.53 (alpha was 0.05) and my test **failed to reject the null hypothesis**. That is, I could not reject the hypothesis that Texas's waste ratio is equal to the rest of the US. While Texas certainly generates the lion's share of energy in this country, it remains unclear justhow Texas stacks up to the res of the country...for now. I wanted to see how the waste ratios between Texas and the US changed over time see if we could expect a change going forward. The resulting plot was interesting:
+
+![texas_us_ratio and cost](/plots/waste_ratio_over_time_with_price.png)
+
+Clearly since about 2011/2012, the waste ratio in Texas has sky-rocketed. While this ratio still remains small, we are talking about huge amounts of energy. As the US has overtaken Saudi Arabia and Russia as the world's top producers, and as oil companies push further and further into the deserts of Texas, away from any market that demands natural gas, the most feasible option available is to burn it off. This is not a new problem. This has been discussed globally for a very long time. Its time to re-think how this energy can be used especially in our hyper-connected world and 5G future.  
+
+# Technologies Employed
+* Python (Numpy, Matplotlib, Beautiful Soup, Scipy, Pandas, Seaborn)
+* MongoDB
+* Amazon Web Services EC2
+
+# Next Steps
+
+Given the time, I would have performed multiple statistical tests Texas and other states as well as other states vs. the US. This would have given me a better picture of which state best handles their produced gas. More broadly, flaring remains common practice globally. The ultimate goal is to make doing the right thing the most economical choice, and share that technology broadly. 
+
+There are some very interesting solutions that have emerged to better use the energy - including blockchain and Bitcoin mining. Some of the challenges that I can forsee as more people try to make use of this 'free' energy are the remoteness of the flaring locations and their proximity to areas with acess to internet, fiber, 4G/5G, etc. I am very interested at drilling down on this issue, especially in Texas. I can envision levearaging GPS coordinates and proximity tools in Python to map out favorable canditdates for using the gas to power computers / connectivity. 
+
+# Acknowledgements
+
+Thanks to Dan Rupp, Juliana Duncan, and Broderick Turner for their support throughout this project and for keeping me focused.
+
+Also thanks to the US Energy Information Administration for reporting the data. 
+
+
