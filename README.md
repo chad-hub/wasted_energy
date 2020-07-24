@@ -12,11 +12,16 @@ Now that I am empowered with the tools and knowledge to explore and test the dat
 # Hypothesis
 I decided to focus on Texas' energy waste vs. the overall waste in the US becuase Texas is, by a wide margin, the state that produces the most energy from hydrocarbons. 
 
-![](top_states.png)
+![topstatespic](/plots/top_states.png)
 
-Another reason I focused on Texas is becuase they are the largest contributor to flaring. 
 
-# Data Sources
+Another driving factor for me is that Texas is the second largest state, and the productive reservoirs are spread across a wide swath of land in West Texas - many of these areas very remote with little or no infrastructure in place to bring the natural gas to market. 
+  * Ho : The mean waste ratio for Texas is equivalent to that of the rest of the United States
+  * Ha : The mean waste ratio for Texas is not equivalent to that of the rest of the United States
+  
+This test leveraged the two-tailed Welch's t-test between Texas and the US for reported production and flaring data dating back to 1980. This provided an adequate smaple size for the Central Limit Theorem to hold. Used alpha value of 0.05 as rejection criteria.
+
+# Data
 
 Luckily, there is a healthy trove of public information available to explore this information:
 
