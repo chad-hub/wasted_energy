@@ -47,8 +47,7 @@ for idx, url in enumerate(pages):
         time.sleep(slp)
     #add state:data dict to mongo db
     collections[idx].insert_one(d)
-    #print(d)
-    #print('______________________________________________')
+
     
         
     time.sleep(20)
