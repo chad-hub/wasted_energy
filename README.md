@@ -23,25 +23,30 @@ This test leveraged the two-tailed Welch's t-test between Texas and the US for r
 
 # Data
 
-Luckily, there is a healthy trove of public information available to explore this information:
+All data for this analysis was scraped from [U.S. Energy Information Administration](https://www.eia.gov/). The site reports every states reported oil and gas production, and the amount of gas vented / flared (wasted). Unfortunately, some states like Pennsylvania, home to massive quantities of natural gas, do not report flaring information. All innformation regarding the production volumes and flare volumes for every available year was scraped via Beautiful Soup and stashed in a MongoDB database. The databases were separated into collections of oil produced, gas produced, and gas flared for each reporting state. The DBs were read into Python Pandas via PyMongo. From there, Pandas allowed me to clean up the data to be used in my EDA. 
 
-- **Texas Railroad Commission:**
-  - [Natural Gas Production Data](https://rrc.texas.gov/oil-gas/research-and-statistics/production-data/historical-production-data/natural-gas-production-and-well-counts-since-1935/)
-  - [Oil Production Data](https://rrc.texas.gov/oil-gas/research-and-statistics/production-data/historical-production-data/crude-oil-production-and-well-counts-since-1935/)
-  - [TRRC Commissioner Report](https://rrc.texas.gov/media/56420/sitton-texas-flaring-report-q1-2020.pdf)
-  
-- **U.S. Energy Information:**
-  - [Summary Statistics for Natural Gas - Texas](https://www.eia.gov/dnav/ng/ng_sum_lsum_dcu_STX_a.htm)
-  - [Well Locations, Plant Locations, Volumes](https://www.eia.gov/beta/states/states/tx/data/dashboard/natural-gas)
+# EDA
+
+After the data was merged and cleaned, I began performing some basic EDA forcusing on some of points of interest. I started with looking into the bigger picture, and then diving into testing my hypothesis. 
+
+![total energy](/plots/tot_energy_produced.png)
  
+ This plot shows the annual energy production of the US (including Texas) and Texas alone. The units depicted are kWh, combing both natural gas and oil values. Also on the graph is the percentage of energy consumed in the United States that comes from one of those two sources in the same time frame. I wanted to display the percentage from these sources as well because it speaks to why my topic is so important. These products, with all their flaws, still dominate our energy spectrum. As we wane off these goods for greener sources, we need to ensure that we still strive to optimize them. It will take decades to switch to fully renewable sources, and even longer for the developing world. This graph emphasizes this point for me.  
+ 
+![cum_energy_waste](/plots/cum_waste.png)
 
-  # Strategy
-  1. Scrape as much information possible for multple publically available sources.
-  2. Establish pipeline of clean, usable data.
-  3. Generate visual representations that make the scale of the energy waste clear. Examples of questions I hope to answer:
-    - Exactly how much energy have we wasted? How does this compare to historical oil / gas production and consumption?
-    - What is the scale of waste in terms of other potential uses?
-    - What are the economics driving the decision to flare? 
-    - What does the flare volume look like going forward and what ways is this issue being solved?
-  4. Leverage hypothesis testing methods to demonstrate ability to apply lessons to real problems. 
+The above plot shows, quite simply, the scale of the waster we are talking about over the years. Some perspective: 
+  * The total amount of energy wasted to flare since 1980 could power 161 million US homes for a year (based on 2019 consumption average) 
+  * The total amount of energy wasted to flare in 2018 *alone* could power around 12.5 million homes for a year (based on 2019 consumption average)
+  * The same energy wasted in 2018 could power a Tesla journey to the sun and back over 3,000 times. (4.1 miles per kWh Tesla average)
+
+Obviously the examples above don't facotor in the energy lost in converting thermal energy to mechanical and inefficiencies in power systems. I am speaking from a pure energy perspective. 
+
+After getting familiar with the data and observing the large scale energy waste, I turned my attention to testing my Hypothesis. I sliced the data to only include Texas and the rest of the US, normalized the volumes produced / flared with kWh, and created the ratio of energy wasted / energy produced - a unitless value that provides a useful proving ground for how well Texas is utilizing its energy vs. the rest of the country. 
+
+![texas_us_hist](/plots/TX_US_hist.png)
+
+
+![texas_us_box](/plots/TX_US_box.png)
+
 
