@@ -1,3 +1,4 @@
+# %%
 from pymongo import MongoClient
 import pprint
 from bs4 import BeautifulSoup
@@ -7,6 +8,17 @@ import random
 
 
 def scrape_data(pages, sub_pages, collections):
+    '''Scrapes desired information from EIA.gov and dumps data into mongo DB.
+    Parameters:
+    ----------
+    pages: URL to EIA page
+    sub_pages: pages within EIA that contain desired data
+    collections: established mongo DB collections
+
+    Returns: None. Dumps data into mongo DB
+
+    '''
+
     for idx, url in enumerate(pages):
         r = requests.get(url)
         soup = BeautifulSoup(r.text, 'html.parser')
@@ -36,6 +48,7 @@ def scrape_data(pages, sub_pages, collections):
     time.sleep(20)
 
 def main():
+    # Establish connection to Mongo DB via docker (ensure docker container is running)
     client = MongoClient('localhost', 27017)
     db = client['eia_data']
 
@@ -50,8 +63,12 @@ def main():
     oil_produced = db['oil_produced']
     natural_gas_produced = db['natural_gas_produced']
     natural_gas_flared = db['natural_gas_flared']
-
     collections = [oil_produced, natural_gas_produced, natural_gas_flared]
+
+    # scrape data
+    scrape_data(pages, sub_pages, collections)
 
 if __name__ == '__main__':
     main()
+
+# %%
